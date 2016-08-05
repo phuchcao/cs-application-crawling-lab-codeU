@@ -54,6 +54,7 @@ public class WikiFetcher {
 
 		// read the file
 		InputStream stream = WikiFetcher.class.getClassLoader().getResourceAsStream(filename);
+		System.out.println(filename);
 		Document doc = Jsoup.parse(stream, "UTF-8", filename);
 
 		// TODO: factor out the following repeated code
